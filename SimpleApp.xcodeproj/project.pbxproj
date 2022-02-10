@@ -16,6 +16,8 @@
 		C2CDB2A827B3E6BA004D3D73 /* SimpleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2A727B3E6BA004D3D73 /* SimpleAppTests.swift */; };
 		C2CDB2B227B3E6BA004D3D73 /* SimpleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2B127B3E6BA004D3D73 /* SimpleAppUITests.swift */; };
 		C2CDB2B427B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2B327B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift */; };
+		C2CDB2C127B3E990004D3D73 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2C027B3E990004D3D73 /* Model.swift */; };
+		C2CDB2C527B3EEF7004D3D73 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2C427B3EEF7004D3D73 /* Server.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C2CDB2AD27B3E6BA004D3D73 /* SimpleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CDB2B127B3E6BA004D3D73 /* SimpleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppUITests.swift; sourceTree = "<group>"; };
 		C2CDB2B327B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2CDB2C027B3E990004D3D73 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C2CDB2C427B3EEF7004D3D73 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				C2CDB29927B3E6B9004D3D73 /* Assets.xcassets */,
 				C2CDB29B27B3E6B9004D3D73 /* LaunchScreen.storyboard */,
 				C2CDB29E27B3E6B9004D3D73 /* Info.plist */,
+				C2CDB2C027B3E990004D3D73 /* Model.swift */,
+				C2CDB2C427B3EEF7004D3D73 /* Server.swift */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				C2CDB29527B3E6B8004D3D73 /* ViewController.swift in Sources */,
 				C2CDB29127B3E6B8004D3D73 /* AppDelegate.swift in Sources */,
 				C2CDB29327B3E6B8004D3D73 /* SceneDelegate.swift in Sources */,
+				C2CDB2C127B3E990004D3D73 /* Model.swift in Sources */,
+				C2CDB2C527B3EEF7004D3D73 /* Server.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
