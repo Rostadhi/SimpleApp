@@ -5,13 +5,24 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<false/>
+		<true/>
 		<key>NSAllowsArbitraryLoadsInWebContentUsageDescription</key>
-		<dict/>
+		<dict>
+			<key>NSATSExceptionThirdPartyServiceConnectionUsage</key>
+			<dict>
+				<key>NSATSExceptionThirdPartyServiceConnectionUsage</key>
+				<dict>
+					<key>NSATSExceptionUsageContentEncryptedByNetwork</key>
+					<true/>
+				</dict>
+			</dict>
+		</dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSAllowsArbitraryLoadsUsageDescription</key>
 		<dict/>
 		<key>NSAllowsLocalNetworking</key>
-		<false/>
+		<true/>
 		<key>NSAllowsLocalNetworkingUsageDescription</key>
 		<dict/>
 		<key>NSExceptionDomains</key>

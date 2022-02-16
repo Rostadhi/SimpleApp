@@ -9,15 +9,18 @@
 /* Begin PBXBuildFile section */
 		C2CDB29127B3E6B8004D3D73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB29027B3E6B8004D3D73 /* AppDelegate.swift */; };
 		C2CDB29327B3E6B8004D3D73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB29227B3E6B8004D3D73 /* SceneDelegate.swift */; };
-		C2CDB29527B3E6B8004D3D73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB29427B3E6B8004D3D73 /* ViewController.swift */; };
 		C2CDB29827B3E6B8004D3D73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDB29627B3E6B8004D3D73 /* Main.storyboard */; };
 		C2CDB29A27B3E6B9004D3D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2CDB29927B3E6B9004D3D73 /* Assets.xcassets */; };
 		C2CDB29D27B3E6B9004D3D73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDB29B27B3E6B9004D3D73 /* LaunchScreen.storyboard */; };
 		C2CDB2A827B3E6BA004D3D73 /* SimpleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2A727B3E6BA004D3D73 /* SimpleAppTests.swift */; };
 		C2CDB2B227B3E6BA004D3D73 /* SimpleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2B127B3E6BA004D3D73 /* SimpleAppUITests.swift */; };
 		C2CDB2B427B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2B327B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift */; };
-		C2CDB2C127B3E990004D3D73 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2C027B3E990004D3D73 /* Model.swift */; };
+		C2CDB2C127B3E990004D3D73 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2C027B3E990004D3D73 /* Auth.swift */; };
 		C2CDB2C527B3EEF7004D3D73 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CDB2C427B3EEF7004D3D73 /* Server.swift */; };
+		C2CDB2C727B49009004D3D73 /* Toko.postman_collection.json in Resources */ = {isa = PBXBuildFile; fileRef = C2CDB2C627B49009004D3D73 /* Toko.postman_collection.json */; };
+		C2D21A5427B659B600AADC43 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21A5327B659B600AADC43 /* LoginViewController.swift */; };
+		C2D21A5827B65B8E00AADC43 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21A5727B65B8E00AADC43 /* ResponseModel.swift */; };
+		C2D21A5A27B6716600AADC43 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D21A5927B6716600AADC43 /* AuthController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +44,6 @@
 		C2CDB28D27B3E6B8004D3D73 /* SimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CDB29027B3E6B8004D3D73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2CDB29227B3E6B8004D3D73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C2CDB29427B3E6B8004D3D73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2CDB29727B3E6B8004D3D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2CDB29927B3E6B9004D3D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2CDB29C27B3E6B9004D3D73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,8 +53,12 @@
 		C2CDB2AD27B3E6BA004D3D73 /* SimpleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CDB2B127B3E6BA004D3D73 /* SimpleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppUITests.swift; sourceTree = "<group>"; };
 		C2CDB2B327B3E6BA004D3D73 /* SimpleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C2CDB2C027B3E990004D3D73 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C2CDB2C027B3E990004D3D73 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C2CDB2C427B3EEF7004D3D73 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		C2CDB2C627B49009004D3D73 /* Toko.postman_collection.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Toko.postman_collection.json; sourceTree = "<group>"; };
+		C2D21A5327B659B600AADC43 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C2D21A5727B65B8E00AADC43 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		C2D21A5927B6716600AADC43 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +109,18 @@
 		C2CDB28F27B3E6B8004D3D73 /* SimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				C2CDB2C627B49009004D3D73 /* Toko.postman_collection.json */,
 				C2CDB29027B3E6B8004D3D73 /* AppDelegate.swift */,
 				C2CDB29227B3E6B8004D3D73 /* SceneDelegate.swift */,
-				C2CDB29427B3E6B8004D3D73 /* ViewController.swift */,
 				C2CDB29627B3E6B8004D3D73 /* Main.storyboard */,
 				C2CDB29927B3E6B9004D3D73 /* Assets.xcassets */,
 				C2CDB29B27B3E6B9004D3D73 /* LaunchScreen.storyboard */,
 				C2CDB29E27B3E6B9004D3D73 /* Info.plist */,
-				C2CDB2C027B3E990004D3D73 /* Model.swift */,
+				C2CDB2C027B3E990004D3D73 /* Auth.swift */,
 				C2CDB2C427B3EEF7004D3D73 /* Server.swift */,
+				C2D21A5327B659B600AADC43 /* LoginViewController.swift */,
+				C2D21A5727B65B8E00AADC43 /* ResponseModel.swift */,
+				C2D21A5927B6716600AADC43 /* AuthController.swift */,
 			);
 			path = SimpleApp;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CDB2C727B49009004D3D73 /* Toko.postman_collection.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CDB29527B3E6B8004D3D73 /* ViewController.swift in Sources */,
 				C2CDB29127B3E6B8004D3D73 /* AppDelegate.swift in Sources */,
 				C2CDB29327B3E6B8004D3D73 /* SceneDelegate.swift in Sources */,
-				C2CDB2C127B3E990004D3D73 /* Model.swift in Sources */,
+				C2CDB2C127B3E990004D3D73 /* Auth.swift in Sources */,
+				C2D21A5427B659B600AADC43 /* LoginViewController.swift in Sources */,
+				C2D21A5827B65B8E00AADC43 /* ResponseModel.swift in Sources */,
+				C2D21A5A27B6716600AADC43 /* AuthController.swift in Sources */,
 				C2CDB2C527B3EEF7004D3D73 /* Server.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

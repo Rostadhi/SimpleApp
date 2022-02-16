@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "50adc2d9-33f9-478a-b451-f97582144eb5",
+		"name": "Toko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+    
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "t",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "test",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/auth/register",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test123@mail.com",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "test123",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/auth/login",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmQ2ZDJiYjc2N2NjZDVjMWNmNWNmNGY3YzY2MTIzODBiOGRlZTZiZWJlOWYyMDkzMWM5OWYyMWMxY2EwZDAxNDU1MzY4OWQ3YzBkYTM4ZDAiLCJpYXQiOjE2MzY2MTE3MjUuMzM5OTQzLCJuYmYiOjE2MzY2MTE3MjUuMzM5OTQ5LCJleHAiOjE2NTIyNTAxMjUuMzA5OTQzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.NNLYKaqVdf0QcWXtU57B7Sq7xnejo3f7doT9RHTg6uRgnu0ewYywo27yVH-FgP4aXEjQkpXX9eiFbomYFmweBcni9HM87XW7imP_NoDgEJtgUvPaRmLmGYhejNuTquyIMO6hFLIPd1kjSFg3Eoodpbi39oMDC_SFnULg6b1CJ-kRm2XQdfHItF-4Sl0fG8w50fDV55lVJxtSoOXT90603d3Rr5kVQ7Ey6vMbNRa_vXNJkUNC_xqyxAzzjzNBZhQRtG2BjqDWTmLHTrnqVrt7q3BmiVkJIODHlN9CGWgxohlM3lA0qIwSqmAvBzgQMRncg41TcA5H2iDAqUIWp0m1tPfqJczgpUu2xqICYts2r3XcT-2lsCRH4OSjEewotAMxmTIYW5IFcDcXH46Tqek6SqClXcjf9XhQ2-YAiqPpPuIWackIlDkHAufX57CS3G_bfH9Bl0yUQq1FDHRHqsIBDESHMjjAAkek_sR9lQmDl1gifBmI3NwmyvAZ9U9PPVJOcXYsuuunMXo9JgFDJRs9y6csxRW3Vj4QfLjluWa2tQlKlelvjEpfub16sXxL6lzo8jdWqwt_95PuCxQU6lMR5FAVR6R0OT8DNBrad1I1IZc1KBq7X-pGT7N9C-CDa4KJkBAxMOd02pCjlJB4F7LzgO42kFi5W3tUysw4IezKNcE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/auth/logout",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pajak",
+			"item": [
+				{
+					"name": "getData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmVmY2NjMjgxODFmOWE4NjZkMGVlMGRkY2I2YjMzYTQ0Njc0NTA0YTQzYjRiNDIwZGEzZjFjN2Q5ZmRmNGRhNGQzNjYwNzllMzNkZDBkMzIiLCJpYXQiOjE2NDQzMDQ2MjguODY4Mzk0LCJuYmYiOjE2NDQzMDQ2MjguODY4Mzk3LCJleHAiOjE2NTk5NDMwMjguODY0OTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.gM0__kvcWylXhq5m4m6QWXUtMoNRxw9QFnBxIuCuEZ6zswygZ7lcsmaHaDS7JprkxwAXKE-HxJitg-LluVUb8jArM85nW1iac9Z4sMTokDAa-tT7GUFBOvc7YChGGu9c59KJfzfEjmAK7PyIx6I-FxLGoD0plHL4tsrO9MOjVgdhhkG7JKvWld1nKbK4tacTnKy7m9hITwedLlw56z3KxvJJNKrI8xq2e7uE1pJ8BqzyZERbJofeITlXUfEfuWuGiGjV6EPKCzhvUmpm6LCN9gR_I2rIMTGpI3L1JyWwtuIXoc9lBE1R4hLW1Fz6p4hr8pAGQlaBc6wQF5MQ5ct1pnkMlzZfNR9QqT0jxgvmG8aiE2AgMbdaRJMeGNSpRwn-BoHP3JPlt0aUF8UdONQsHiSXfF8DAW245VKgVlJV7Qay3YKRXIpKQW08hb15i7xS0QgUhc82qdWpy65FfdryBg5WURGUO2FOLSCeWCz9c76z7As4WD52_YlF2oIttUCrZH9ICr3F7D9nIx2gLJ48zSlnJJm5YWZznENGqy7faK2tjuuou1lJp_gVDE7Kh0o1jumVph_BCxG44yTrIRVdLcNczTjADPco5r6dU2X4miZhPInEsVpxYk1QqwjEqKokIO8d4KJpz7VGZ8FvWkN3bXJwLR-UZAVD0WWgUJ9gPnI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/pajaks?limit=10&page=1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"pajaks"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "default limit 10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDataSingle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDE4MDY0MzIzNGZkMjFlMmM3MTAxYjZmYjk4ZDM1NDExOTAwMTBhOTVhZDY1ZWRhNGFjY2I2Yzk5YjI1NWUzOTk1YzRlZDFkMjRkYzI1YzMiLCJpYXQiOjE2NDQzMDAwMTkuNjc2MDI4LCJuYmYiOjE2NDQzMDAwMTkuNjc2MDM1LCJleHAiOjE2NTk5Mzg0MTkuNTIyODM0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.pT1YFxJuAtnpSt7L-3BnVmO88bb3lVAgl6SrWntIW21V2scfJDq2nbRxca47xL3hTE7mk8JxftkxR0CaQcAQA8s_URuDFvTCOB5_heJWJ2LAEY-FineesfK8bL0aM1jW-uIyRARqR0rGObRv3G--4v9aZe1dad3vR28JXId_8T0XYN-y2jU3S2wuv0OJNK39Q6ReS41ZDvBsmQj8JxOFGFlcfzuo5ARfF5-dcEbrZcHRRK2ZW3GipSxOQyYF82pR81Lvh2P2b9qxJCEij2_yhCLn-zvPxX19jb9t3nObBqy_WGTgKBneVzfni6xoVvQNja3uD_Qkq__D1dAzmpiAD9RD2mvF-m_75GM6BSn6zP1TIv1WaZYvtTy5z79wjR3LNFRzVVKcQFqv5IcXr0GUY7-GyoRA2b4FOiMMivy9NjkXNOXxWZ35RBO_afLn1X6WtFHluiAgCIm1k3cNc8_mUq4LzfmHTJSMtAsijwavEmR4KAxbEARpEtTn0hqvm0AKkrMnRzELTxQGQhazPERZEC5ow6yUj1XgaZu3sb1Rcw1dVPom8SLlATEgWhv-3TXeLKTaYtRXeW9jlsSwEltfj4mlxJje6vUcni3qSTtfRtZwkAfH4OzeypEEAXrL60l4ju5cUiOr4WBX1BZy4IMwMRUOXFQ9jHOaFs-yYsO3Zv0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/pajak/2",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"pajak",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTg0OGVjYTdjNzllNzhjMDc1MGZlMmViOTIzOTEzYjg4MGJmMGE5MGY3MjA1ZjM5YzhlMWVkOWM2YmRjMjg2M2E0ZmM5OWUwMGZlYzJkODEiLCJpYXQiOjE2MzY2NDM2MTcuMTUwMzk2LCJuYmYiOjE2MzY2NDM2MTcuMTUwNDA3LCJleHAiOjE2NTIyODIwMTcuMDgyMjg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.euW3tm5_L08lwPEVhKeMGzktikE2r93CUTuwHvAWTrRDyYfFjV6ufvODILK0JhVkGbxBTA1NwRmN5a2XBzbbIsna0dD5yLeKPIBTD5YDRutXxBpIEWHM70G0caGb4k69GkLB0H3fo60IecIEK2BGhB5LDNjy--SfKKsICtoki8YrCb2yhZuaJnxPOio23LpuijOe-HWWUXZNlEBI896xGK8gbJJtU3EUjivgZHjpiedKztMHTKetF1edZ8aA84fnmmMS_h71_znxihEsplPfI3pS2Aza8QKXW5aDjY6OJlVYRkeLbQyzZcf7h2TZkqBath01mVB69BJBGyoXgNQH3vdbM28R-LFtZ1E79wLylYNOVAa0eWMCaa7ttDCWCHEOfJr0NdX_uNMb28fRCf9l9PkTjVWvJT94w472Ut310wQT3OU-z542LD-xBKrPbnFFKWugWzvgIRjOH26kTbl-g1N4v7OitYWIvEpeN7Qrn22hFZo3BFkT5r1WmHQ4nsnonzTdPEl_1wbihYJ-dQAfsnSN_CrFGVCPFnVFi7Q2PQNsHl0gjqPtW52S9fJpJ0naXaVWNuxl3-CM9ewnB4Of5n8h1q6ZJCcOeA3w7Y564qddw4KOgFyluSGAOevg-8M8GoIoTck2SACaRbpqE57MgBUUJPT2FWrjKbdePHDVyfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "pajak toko",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "10",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/pajak/store",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"pajak",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjBhYTBjMTQ1MWViNmQzZTdlOTdiODRmMzVjODliNzQ5MDlhYTZiOTU1ZTAxZWY4ODczNzUwMzAyM2I4ODhhYjczMmRkMDU3NDM1ZDUzMDEiLCJpYXQiOjE2MzY2MTE3NjkuNDgzMTI4LCJuYmYiOjE2MzY2MTE3NjkuNDgzMTMzLCJleHAiOjE2NTIyNTAxNjkuNDU1ODcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.XgOWtrtj-yFJMzz8K56nc_i62hcUxIOZCVjRhqps58M8wo5GsemwjhINs0jF_WhvFHhsmpA2f34PCYzPNeiTmHfsJcScl9gyvmMvKU0Ah-ETidXbGMcYzIm0Sc96bv3h7Xj8Z-K1UKvzXs5LS0l6zcgm14UxUuiIvr2nKdhDGAYOc16cwaSnZ0Lig_V7fH9WGi-UenDfTkhtuv6Ia24IGZFygDjHkHffqt0YzxOz-y-2DnbdGMK5Xha4KiotO_YCctN_eYE1VfLnWMw1_09vE6yDZt8dpTFDzirvjYaq4PZ7zFR4j2XL2Mkffn68PypvZdYiXyVv37sOYAj0Ayrcen-68RxTSx9y_DAAnaWVJXeveIB-qn3O_zv-ae571bnH5igdqNWyOeKD1IkmLQKqjcZMtpSC-GTADqEUKhx126VwD6RCCbZUOL4QwGC2MvLxG0h-HRyl0O4j8X7oKmJGYvgBilHQqQuwtH4ExJ7Y2KqEigUb8ObRNkOyw-qhZn-DJPJiyjECYKEYZFU0rv4fzWxkFe5ed85YMjCbs7UmR10Gxa0vgmqGaw4z7ogDDVA4C8szEh4Wqx_9DtezCErdcVyogpOpWf01AtSnRZFLNwh8_7AvkbOd4AD9lWWYjTPEDccHMnMqBelD7LCKI4L6T3rJOfNoogWz7tbZ9BAbQTs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "pph",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "5",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/pajak/update/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"pajak",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjBhYTBjMTQ1MWViNmQzZTdlOTdiODRmMzVjODliNzQ5MDlhYTZiOTU1ZTAxZWY4ODczNzUwMzAyM2I4ODhhYjczMmRkMDU3NDM1ZDUzMDEiLCJpYXQiOjE2MzY2MTE3NjkuNDgzMTI4LCJuYmYiOjE2MzY2MTE3NjkuNDgzMTMzLCJleHAiOjE2NTIyNTAxNjkuNDU1ODcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.XgOWtrtj-yFJMzz8K56nc_i62hcUxIOZCVjRhqps58M8wo5GsemwjhINs0jF_WhvFHhsmpA2f34PCYzPNeiTmHfsJcScl9gyvmMvKU0Ah-ETidXbGMcYzIm0Sc96bv3h7Xj8Z-K1UKvzXs5LS0l6zcgm14UxUuiIvr2nKdhDGAYOc16cwaSnZ0Lig_V7fH9WGi-UenDfTkhtuv6Ia24IGZFygDjHkHffqt0YzxOz-y-2DnbdGMK5Xha4KiotO_YCctN_eYE1VfLnWMw1_09vE6yDZt8dpTFDzirvjYaq4PZ7zFR4j2XL2Mkffn68PypvZdYiXyVv37sOYAj0Ayrcen-68RxTSx9y_DAAnaWVJXeveIB-qn3O_zv-ae571bnH5igdqNWyOeKD1IkmLQKqjcZMtpSC-GTADqEUKhx126VwD6RCCbZUOL4QwGC2MvLxG0h-HRyl0O4j8X7oKmJGYvgBilHQqQuwtH4ExJ7Y2KqEigUb8ObRNkOyw-qhZn-DJPJiyjECYKEYZFU0rv4fzWxkFe5ed85YMjCbs7UmR10Gxa0vgmqGaw4z7ogDDVA4C8szEh4Wqx_9DtezCErdcVyogpOpWf01AtSnRZFLNwh8_7AvkbOd4AD9lWWYjTPEDccHMnMqBelD7LCKI4L6T3rJOfNoogWz7tbZ9BAbQTs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/pajak/delete/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"pajak",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "getData",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTg0OGVjYTdjNzllNzhjMDc1MGZlMmViOTIzOTEzYjg4MGJmMGE5MGY3MjA1ZjM5YzhlMWVkOWM2YmRjMjg2M2E0ZmM5OWUwMGZlYzJkODEiLCJpYXQiOjE2MzY2NDM2MTcuMTUwMzk2LCJuYmYiOjE2MzY2NDM2MTcuMTUwNDA3LCJleHAiOjE2NTIyODIwMTcuMDgyMjg3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.euW3tm5_L08lwPEVhKeMGzktikE2r93CUTuwHvAWTrRDyYfFjV6ufvODILK0JhVkGbxBTA1NwRmN5a2XBzbbIsna0dD5yLeKPIBTD5YDRutXxBpIEWHM70G0caGb4k69GkLB0H3fo60IecIEK2BGhB5LDNjy--SfKKsICtoki8YrCb2yhZuaJnxPOio23LpuijOe-HWWUXZNlEBI896xGK8gbJJtU3EUjivgZHjpiedKztMHTKetF1edZ8aA84fnmmMS_h71_znxihEsplPfI3pS2Aza8QKXW5aDjY6OJlVYRkeLbQyzZcf7h2TZkqBath01mVB69BJBGyoXgNQH3vdbM28R-LFtZ1E79wLylYNOVAa0eWMCaa7ttDCWCHEOfJr0NdX_uNMb28fRCf9l9PkTjVWvJT94w472Ut310wQT3OU-z542LD-xBKrPbnFFKWugWzvgIRjOH26kTbl-g1N4v7OitYWIvEpeN7Qrn22hFZo3BFkT5r1WmHQ4nsnonzTdPEl_1wbihYJ-dQAfsnSN_CrFGVCPFnVFi7Q2PQNsHl0gjqPtW52S9fJpJ0naXaVWNuxl3-CM9ewnB4Of5n8h1q6ZJCcOeA3w7Y564qddw4KOgFyluSGAOevg-8M8GoIoTck2SACaRbpqE57MgBUUJPT2FWrjKbdePHDVyfU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "pajak toko",
+									"type": "text"
+								},
+								{
+									"key": "rate",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/items?limit=10&page=1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"items"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "default limit 10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDataSingle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmVmY2NjMjgxODFmOWE4NjZkMGVlMGRkY2I2YjMzYTQ0Njc0NTA0YTQzYjRiNDIwZGEzZjFjN2Q5ZmRmNGRhNGQzNjYwNzllMzNkZDBkMzIiLCJpYXQiOjE2NDQzMDQ2MjguODY4Mzk0LCJuYmYiOjE2NDQzMDQ2MjguODY4Mzk3LCJleHAiOjE2NTk5NDMwMjguODY0OTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.gM0__kvcWylXhq5m4m6QWXUtMoNRxw9QFnBxIuCuEZ6zswygZ7lcsmaHaDS7JprkxwAXKE-HxJitg-LluVUb8jArM85nW1iac9Z4sMTokDAa-tT7GUFBOvc7YChGGu9c59KJfzfEjmAK7PyIx6I-FxLGoD0plHL4tsrO9MOjVgdhhkG7JKvWld1nKbK4tacTnKy7m9hITwedLlw56z3KxvJJNKrI8xq2e7uE1pJ8BqzyZERbJofeITlXUfEfuWuGiGjV6EPKCzhvUmpm6LCN9gR_I2rIMTGpI3L1JyWwtuIXoc9lBE1R4hLW1Fz6p4hr8pAGQlaBc6wQF5MQ5ct1pnkMlzZfNR9QqT0jxgvmG8aiE2AgMbdaRJMeGNSpRwn-BoHP3JPlt0aUF8UdONQsHiSXfF8DAW245VKgVlJV7Qay3YKRXIpKQW08hb15i7xS0QgUhc82qdWpy65FfdryBg5WURGUO2FOLSCeWCz9c76z7As4WD52_YlF2oIttUCrZH9ICr3F7D9nIx2gLJ48zSlnJJm5YWZznENGqy7faK2tjuuou1lJp_gVDE7Kh0o1jumVph_BCxG44yTrIRVdLcNczTjADPco5r6dU2X4miZhPInEsVpxYk1QqwjEqKokIO8d4KJpz7VGZ8FvWkN3bXJwLR-UZAVD0WWgUJ9gPnI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{domain}}/api/item/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmVmY2NjMjgxODFmOWE4NjZkMGVlMGRkY2I2YjMzYTQ0Njc0NTA0YTQzYjRiNDIwZGEzZjFjN2Q5ZmRmNGRhNGQzNjYwNzllMzNkZDBkMzIiLCJpYXQiOjE2NDQzMDQ2MjguODY4Mzk0LCJuYmYiOjE2NDQzMDQ2MjguODY4Mzk3LCJleHAiOjE2NTk5NDMwMjguODY0OTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.gM0__kvcWylXhq5m4m6QWXUtMoNRxw9QFnBxIuCuEZ6zswygZ7lcsmaHaDS7JprkxwAXKE-HxJitg-LluVUb8jArM85nW1iac9Z4sMTokDAa-tT7GUFBOvc7YChGGu9c59KJfzfEjmAK7PyIx6I-FxLGoD0plHL4tsrO9MOjVgdhhkG7JKvWld1nKbK4tacTnKy7m9hITwedLlw56z3KxvJJNKrI8xq2e7uE1pJ8BqzyZERbJofeITlXUfEfuWuGiGjV6EPKCzhvUmpm6LCN9gR_I2rIMTGpI3L1JyWwtuIXoc9lBE1R4hLW1Fz6p4hr8pAGQlaBc6wQF5MQ5ct1pnkMlzZfNR9QqT0jxgvmG8aiE2AgMbdaRJMeGNSpRwn-BoHP3JPlt0aUF8UdONQsHiSXfF8DAW245VKgVlJV7Qay3YKRXIpKQW08hb15i7xS0QgUhc82qdWpy65FfdryBg5WURGUO2FOLSCeWCz9c76z7As4WD52_YlF2oIttUCrZH9ICr3F7D9nIx2gLJ48zSlnJJm5YWZznENGqy7faK2tjuuou1lJp_gVDE7Kh0o1jumVph_BCxG44yTrIRVdLcNczTjADPco5r6dU2X4miZhPInEsVpxYk1QqwjEqKokIO8d4KJpz7VGZ8FvWkN3bXJwLR-UZAVD0WWgUJ9gPnI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "baju polos",
+									"type": "text"
+								},
+								{
+									"key": "pajak_id[0]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pajak_id[1]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"type": "file",
+									"src": "/home/pengguna/Pictures/Selection_260.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/item/store",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmVmY2NjMjgxODFmOWE4NjZkMGVlMGRkY2I2YjMzYTQ0Njc0NTA0YTQzYjRiNDIwZGEzZjFjN2Q5ZmRmNGRhNGQzNjYwNzllMzNkZDBkMzIiLCJpYXQiOjE2NDQzMDQ2MjguODY4Mzk0LCJuYmYiOjE2NDQzMDQ2MjguODY4Mzk3LCJleHAiOjE2NTk5NDMwMjguODY0OTcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.gM0__kvcWylXhq5m4m6QWXUtMoNRxw9QFnBxIuCuEZ6zswygZ7lcsmaHaDS7JprkxwAXKE-HxJitg-LluVUb8jArM85nW1iac9Z4sMTokDAa-tT7GUFBOvc7YChGGu9c59KJfzfEjmAK7PyIx6I-FxLGoD0plHL4tsrO9MOjVgdhhkG7JKvWld1nKbK4tacTnKy7m9hITwedLlw56z3KxvJJNKrI8xq2e7uE1pJ8BqzyZERbJofeITlXUfEfuWuGiGjV6EPKCzhvUmpm6LCN9gR_I2rIMTGpI3L1JyWwtuIXoc9lBE1R4hLW1Fz6p4hr8pAGQlaBc6wQF5MQ5ct1pnkMlzZfNR9QqT0jxgvmG8aiE2AgMbdaRJMeGNSpRwn-BoHP3JPlt0aUF8UdONQsHiSXfF8DAW245VKgVlJV7Qay3YKRXIpKQW08hb15i7xS0QgUhc82qdWpy65FfdryBg5WURGUO2FOLSCeWCz9c76z7As4WD52_YlF2oIttUCrZH9ICr3F7D9nIx2gLJ48zSlnJJm5YWZznENGqy7faK2tjuuou1lJp_gVDE7Kh0o1jumVph_BCxG44yTrIRVdLcNczTjADPco5r6dU2X4miZhPInEsVpxYk1QqwjEqKokIO8d4KJpz7VGZ8FvWkN3bXJwLR-UZAVD0WWgUJ9gPnI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "kaos hitam",
+									"type": "text"
+								},
+								{
+									"key": "pajak_id[0]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pajak_id[1]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								},
+								{
+									"key": "harga",
+									"value": "10002",
+									"type": "text"
+								},
+								{
+									"key": "gambar",
+									"type": "file",
+									"src": "/home/pengguna/Downloads/polis.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/item/update/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjBhYTBjMTQ1MWViNmQzZTdlOTdiODRmMzVjODliNzQ5MDlhYTZiOTU1ZTAxZWY4ODczNzUwMzAyM2I4ODhhYjczMmRkMDU3NDM1ZDUzMDEiLCJpYXQiOjE2MzY2MTE3NjkuNDgzMTI4LCJuYmYiOjE2MzY2MTE3NjkuNDgzMTMzLCJleHAiOjE2NTIyNTAxNjkuNDU1ODcsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.XgOWtrtj-yFJMzz8K56nc_i62hcUxIOZCVjRhqps58M8wo5GsemwjhINs0jF_WhvFHhsmpA2f34PCYzPNeiTmHfsJcScl9gyvmMvKU0Ah-ETidXbGMcYzIm0Sc96bv3h7Xj8Z-K1UKvzXs5LS0l6zcgm14UxUuiIvr2nKdhDGAYOc16cwaSnZ0Lig_V7fH9WGi-UenDfTkhtuv6Ia24IGZFygDjHkHffqt0YzxOz-y-2DnbdGMK5Xha4KiotO_YCctN_eYE1VfLnWMw1_09vE6yDZt8dpTFDzirvjYaq4PZ7zFR4j2XL2Mkffn68PypvZdYiXyVv37sOYAj0Ayrcen-68RxTSx9y_DAAnaWVJXeveIB-qn3O_zv-ae571bnH5igdqNWyOeKD1IkmLQKqjcZMtpSC-GTADqEUKhx126VwD6RCCbZUOL4QwGC2MvLxG0h-HRyl0O4j8X7oKmJGYvgBilHQqQuwtH4ExJ7Y2KqEigUb8ObRNkOyw-qhZn-DJPJiyjECYKEYZFU0rv4fzWxkFe5ed85YMjCbs7UmR10Gxa0vgmqGaw4z7ogDDVA4C8szEh4Wqx_9DtezCErdcVyogpOpWf01AtSnRZFLNwh8_7AvkbOd4AD9lWWYjTPEDccHMnMqBelD7LCKI4L6T3rJOfNoogWz7tbZ9BAbQTs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "_method",
+									"value": "DELETE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{domain}}/api/item/delete/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
